@@ -202,7 +202,7 @@ document.querySelector('#root').innerHTML = `
       </button>
 
       <img
-        src="/src/assets/church-photo.png"
+        src="./src/assets/church-photo.png"
         alt="ECI Church Gurgaon"
         class="photo-modal-image"
       />
