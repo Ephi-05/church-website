@@ -358,6 +358,10 @@ footer {
   padding: 14px 18px;
 }
 
+.verse-reference {
+  white-space: nowrap;
+}
+
 .promise-image-link {
   display: block;
 }
