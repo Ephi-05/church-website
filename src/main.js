@@ -110,7 +110,7 @@ document.querySelector('#root').innerHTML = `
       </div>
       <div class="hero-card image-card">
         <button class="photo-button" type="button" aria-label="Open church photo">
-          <img src="/src/assets/church-photo.png" alt="ECI Church Gurgaon" />
+          <img src="./src/assets/church-photo.png" alt="ECI Church Gurgaon" />
         </button>
         <span>ECI Church Gurgaon</span>
       </div>
@@ -128,7 +128,7 @@ document.querySelector('#root').innerHTML = `
 
   <a class="slide" href="${mapUrl}" target="_blank" rel="noreferrer">
     <img
-      src="/src/assets/church-interior.png"
+      src="./src/assets/church-interior.png"
       alt="Inside ECI Church Gurgaon"
     />
     <strong>Images</strong>
@@ -137,7 +137,7 @@ document.querySelector('#root').innerHTML = `
 
   <a class="slide" href="${mapUrl}" target="_blank" rel="noreferrer">
     <img
-      src="/src/assets/church-map.png"
+      src="./src/assets/church-map.png"
       alt="ECI Church Gurgaon location on Google Maps"
     />
     <strong>Church location</strong>
@@ -160,7 +160,7 @@ document.querySelector('#root').innerHTML = `
   </div>
 
   <img
-    src="/src/assets/Promise-verse.png"
+    src="./src/assets/Promise-verse.png"
     alt="Promise verse card for 2 Chronicles 25:9"
     class="promise-image"
   />
