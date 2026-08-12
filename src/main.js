@@ -187,7 +187,7 @@ document.querySelector('#root').innerHTML = `
       <div>
         <p class="eyebrow">Visit us</p>
         <h2>We would love to worship with you.</h2>
-        <p class="address">ECI Church, Gurgaon, Haryana</p>
+        <p class="address">ECI Church, Gurgaon, Haryana, 122001</p>
         <a class="map-link" href="${mapUrl}" target="_blank" rel="noreferrer">Open church location in Google Maps</a>
       </div>
       <a class="secondary-action map-button" href="${mapUrl}" target="_blank" rel="noreferrer">
