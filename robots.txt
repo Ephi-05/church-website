@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ephi-05.github.io/church-website/sitemap.xml
