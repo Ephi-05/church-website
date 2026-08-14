@@ -100,7 +100,7 @@ document.querySelector('#root').innerHTML = `
 
     <section class="hero" id="home">
       <div class="hero-copy">
-        <p class="eyebrow">Welcome home</p>
+        <p class="eyebrow">Welcome</p>
         <h1>ECI Church Gurgaon</h1>
         <p>A simple church home page for Hindi, Tamil, and Telugu worship services in Gurgaon.</p>
         <div class="hero-actions">
@@ -166,7 +166,7 @@ document.querySelector('#root').innerHTML = `
   />
 </section>
 
-    <section class="tamil" id="tamil">
+    <section class="tamil" id="tamil ">
       <div class="section-heading">
         <p class="eyebrow">Tamil service rhythm</p>
         <h2>Special weekly schedule for the Tamil service.</h2>
