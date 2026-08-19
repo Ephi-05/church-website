@@ -569,24 +569,119 @@ footer p {
   margin: 0;
 }
 
-.service-arrow {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  line-height: 1;
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
-}
-
-.service-card[open] .service-arrow {
-  transform: rotate(180deg);
-}
 
 .service-details {
   margin-top: 24px;
   padding-top: 20px;
   border-top: 1px solid currentColor;
+}
+
+
+.service-card[open] .service-details {
+  animation: serviceDrop 0.25s ease;
+}
+
+/* Services navigation dropdown */
+
+.services-menu {
+  position: relative;
+}
+
+.services-menu summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.services-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.services-menu summary span {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.services-menu[open] summary span {
+  transform: rotate(180deg);
+}
+
+.services-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150px;
+  padding: 8px;
+  background: #fffaf3;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.services-dropdown a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #211c18;
+  white-space: nowrap;
+}
+
+.services-dropdown a:hover {
+  background: #f3e5ce;
+}
+
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Navigation hover effect */
+
+.nav-links > a,
+.services-menu > summary {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-links > a::after,
+.services-menu > summary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.nav-links > a:hover::after,
+.services-menu > summary:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Service card hover effect */
+
+.service-card summary {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.service-card summary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }

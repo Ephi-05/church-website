@@ -62,13 +62,15 @@ const tamilSchedule = [
 ];
 
 const serviceCards = services.map((service) => `
-  <details class="service-card ${service.featured ? 'featured-service' : ''}">
+  <details
+    class="service-card ${service.featured ? 'featured-service' : ''}"
+    id="service-${service.language.toLowerCase()}"
+  >
     
     <summary>
       <div class="service-topline">Sunday service</div>
       <div class="service-summary-row">
         <h3>${service.language}</h3>
-        <span class="service-arrow">⌄</span>
       </div>
       <p class="service-time">${service.time}</p>
     </summary>
@@ -102,12 +104,22 @@ document.querySelector('#root').innerHTML = `
         <span class="brand-mark">ECI</span>
         <span>ECI Church Gurgaon</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#tamil">Tamil</a>
-        <a href="#sermons">Sermons</a>
-        <a href="#visit">Visit</a>
-      </nav>
+    <nav class="nav-links" aria-label="Primary navigation">
+
+      <details class="services-menu">
+        <summary>Services</summary>
+
+        <div class="services-dropdown">
+          <a href="#service-hindi">Hindi</a>
+          <a href="#service-tamil">Tamil</a>
+          <a href="#service-telugu">Telugu</a>
+        </div>
+     </details>
+
+    <a href="#sermons">Sermons</a>
+    <a href="#visit">Visit</a>
+
+    </nav>
       <a class="nav-button" href="#visit">Plan a Visit</a>
     </header>
 
