@@ -263,3 +263,11 @@ document.addEventListener('keydown', (event) => {
     photoModal.setAttribute('aria-hidden', 'true');
   }
 });
+
+const servicesMenu = document.querySelector('.services-menu');
+
+document.querySelectorAll('.services-dropdown a').forEach((link) => {
+  link.addEventListener('click', () => {
+    servicesMenu.removeAttribute('open');
+  });
+});
