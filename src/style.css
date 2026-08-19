@@ -275,6 +275,7 @@ footer h2 {
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 28px;
+  align-items: start;
 }
 
 .service-card,
@@ -536,4 +537,56 @@ footer p {
   top: 30px;
   width: 48px;
   z-index: 101;
+}
+
+/* Service accordion */
+
+
+
+.service-card {
+  cursor: pointer;
+  height: fit-content;
+  align-self: start;
+}
+
+.service-card summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.service-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.service-summary-row h3 {
+  margin: 0;
+}
+
+.service-arrow {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.service-card[open] .service-arrow {
+  transform: rotate(180deg);
+}
+
+.service-details {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid currentColor;
 }

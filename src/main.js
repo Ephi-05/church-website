@@ -62,13 +62,26 @@ const tamilSchedule = [
 ];
 
 const serviceCards = services.map((service) => `
-  <article class="service-card ${service.featured ? 'featured-service' : ''}">
-    <div class="service-topline">${service.featured ? 'Tamil service details' : 'Sunday service'}</div>
-    <h3>${service.language}</h3>
-    <p class="service-time">${service.time}</p>
-    <p>${service.description}</p>
-    <ul>${service.highlights.map((item) => `<li>${item}</li>`).join('')}</ul>
-  </article>
+  <details class="service-card ${service.featured ? 'featured-service' : ''}">
+    
+    <summary>
+      <div class="service-topline">Sunday service</div>
+      <div class="service-summary-row">
+        <h3>${service.language}</h3>
+        <span class="service-arrow">⌄</span>
+      </div>
+      <p class="service-time">${service.time}</p>
+    </summary>
+
+    <div class="service-details">
+      <p>${service.description}</p>
+
+      <ul>
+        ${service.highlights.map((item) => `<li>${item}</li>`).join('')}
+      </ul>
+    </div>
+
+  </details>
 `).join('');
 
 const tamilItems = tamilSchedule.map((item) => `
